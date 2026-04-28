@@ -37,7 +37,7 @@ SHAP_Driven/
 ├── custom_datasets.py      # Custom dataset class definitions
 ├── utils.py                # Utility functions (SHAP, metrics, visualization)
 ├── inference.py            # Model inference script
-├── gt_split.py             # Ground truth train/test splitting
+├── gt_split.py             # Binary Ground Truth Reformulation: Water vs Non-water
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
 ```
@@ -47,16 +47,16 @@ SHAP_Driven/
 ## Setup
 
 ### Prerequisites
-- Python 3.x
-- CUDA 12.4
-- NVIDIA GPU (recommended)
+Experiments were conducted on a workstation equipped with an AMD Ryzen 9 8945H CPU (8 cores, 16 threads,289
+4.0 GHz), 32 GB RAM, and an NVIDIA GeForce RTX 4070 Laptop GPU running Windows 11. Python 3.10 with290
+PyTorch 2.1.0+cu121 (CUDA 12.1) was used for GPU-accelerated training and inference
 
 ### Installation
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/SHAP_Driven.git
-cd SHAP_Driven
+git clone https://github.com/Sushma7870-git/SHAP-Hyperspectral-Water-Detection.git
+
 ```
 
 2. **Install dependencies:**
@@ -97,7 +97,7 @@ Datasets/
 
 > **Note:** Make sure you have access to the datasets before running the project.
 
-To split ground truth into training and testing sets, run:
+Binary Ground Truth Reformulation: Water vs Non-water, run:
 
 ```bash
 python gt_split.py
@@ -107,20 +107,7 @@ python gt_split.py
 
 ## How to Run
 
-### Training
 
-```bash
-python main.py --dataset PaviaC --model hamida --epoch 10 --cuda 0
-```
-
-**Arguments:**
-
-| Argument | Description | Example |
-|----------|-------------|---------|
-| `--dataset` | Name of the dataset | `PaviaC` |
-| `--model` | CNN model architecture | `hamida` |
-| `--epoch` | Number of training epochs | `10` |
-| `--cuda` | GPU device ID | `0` |
 
 ### Visualization
 
@@ -138,14 +125,20 @@ http://localhost:8097
 Training metrics such as loss and accuracy will be displayed live during training.
 
 ---
-
-### Inference
-
-To run inference on a trained model:
+### Training
 
 ```bash
-python inference.py --checkpoint checkpoints/[model_checkpoint].pth
+python main.py --dataset PaviaC --model hamida --epoch 10 --cuda 0
 ```
+
+**Arguments:**
+
+| Argument | Description | Example |
+|----------|-------------|---------|
+| `--dataset` | Name of the dataset | `PaviaC` |
+| `--model` | CNN model architecture | `hamida` |
+| `--epoch` | Number of training epochs | `10` |
+| `--cuda` | GPU device ID | `0` |
 
 ---
 
@@ -193,13 +186,7 @@ If you use this code in your research, please cite:
 }
 ```
 
----
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 ## Contact
 
