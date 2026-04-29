@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.6.0+cu124-orange.svg)](https://pytorch.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 
 ## Authors
 Sushma Kumari, David Ayala-Cabrera, and Soumyabrata Dev
@@ -15,7 +15,7 @@ This repository contains the official implementation of our paper:
 
 > **SHAP-Driven Spectral Band Reduction for Efficient and Interpretable Hyperspectral Water Body Detection Using Deep CNN Architectures**
 > Sushma Kumari, David Ayala-Cabrera, and Soumyabrata Dev
-> *Journal Name*, Year. DOI: `[to be added]`
+
 
 We propose a SHAP (SHapley Additive exPlanations)-driven framework for spectral band reduction in hyperspectral images, enabling efficient and interpretable water body detection using deep Convolutional Neural Network (CNN) architectures. By selecting only the most informative spectral bands using SHAP values, we significantly reduce computational cost while maintaining high detection accuracy.
 
@@ -174,21 +174,33 @@ Key dependencies (see `requirements.txt` for full list):
 
 ## Reference
 
-If you use this code in your research, please cite:
+If you use this code in your research, please cite our paper:
 
 ```bibtex
-@article{kumari2025shap,
-  title     = {SHAP-Driven Spectral Band Reduction for Efficient and Interpretable Hyperspectral Water Body Detection Using Deep CNN Architectures},
-  author    = {Kumari, Sushma and Ayala-Cabrera, David and Dev, Soumyabrata},
-  journal   = {Journal Name},
-  year      = {2025},
-  doi       = {to be added}
+@misc{kumari2025shap,
+  title={SHAP-Driven Spectral Band Reduction for Efficient and Interpretable 
+         Hyperspectral Water Body Detection Using Deep CNN Architectures},
+  author={Kumari, Sushma and Ayala-Cabrera, David and Dev, Soumyabrata},
+  year={2025},
+  note={Manuscript under review}
 }
 ```
+This work builds upon the following:
 
-
+```bibtex
+@article{audebert2019deep,
+  title={Deep learning for classification of hyperspectral data: A comparative review},
+  author={Audebert, Nicolas and Le Saux, Bertrand and Lef{\`e}vre, S{\'e}bastien},
+  journal={IEEE geoscience and remote sensing magazine},
+  volume={7},
+  number={2},
+  pages={159--173},
+  year={2019},
+  publisher={IEEE}
+}
+```
 
 ## Contact
 
 For questions or issues, please open a GitHub issue or contact:
-- **Sushma Kumari** — [email@domain.com] | [phone number]
+- **Sushma Kumari** — [sushma.kumari@ucdconnect.ie] 
