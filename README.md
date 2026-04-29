@@ -14,6 +14,7 @@ Sushma Kumari, David Ayala-Cabrera, and Soumyabrata Dev
 This repository contains the official implementation of our paper:
 
 > **SHAP-Driven Spectral Band Reduction for Efficient and Interpretable Hyperspectral Water Body Detection Using Deep CNN Architectures**
+
 > Sushma Kumari, David Ayala-Cabrera, and Soumyabrata Dev
 
 
